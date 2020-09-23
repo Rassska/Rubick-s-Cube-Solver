@@ -10,24 +10,38 @@
 #include "Cube.h"
 
     bool isSolvedForFirst(Cube &MyCube, std::vector<char> &TempMatrix){
-            bool isOk = false;
-        if ((*MyCube.DownSide.getVector())[1] == 'W' && (*MyCube.DownSide.getVector())[1] == (*MyCube.DownSide.getVector())[3] && (*MyCube.DownSide.getVector())[3] == (*MyCube.DownSide.getVector())[4] && (*MyCube.DownSide.getVector())[4] == (*MyCube.DownSide.getVector())[5] && (*MyCube.DownSide.getVector())[5] == (*MyCube.DownSide.getVector())[7])
-        {
+        bool isOk = false;
+        if ((*MyCube.DownSide.getVector())[1] == 'W' 
+        && (*MyCube.DownSide.getVector())[1] == (*MyCube.DownSide.getVector())[3] 
+        && (*MyCube.DownSide.getVector())[3] == (*MyCube.DownSide.getVector())[4] 
+        && (*MyCube.DownSide.getVector())[4] == (*MyCube.DownSide.getVector())[5] 
+        && (*MyCube.DownSide.getVector())[5] == (*MyCube.DownSide.getVector())[7]){
             isOk = true;
         }
         return isOk;
     }
     bool isSolvedForSecond(Cube &MyCube, std::vector<char> &TempMatrix){
         bool isOk = false;
-        if ((*MyCube.DownSide.getVector())[1] == 'W' && (*MyCube.DownSide.getVector())[1] == (*MyCube.DownSide.getVector())[3] && (*MyCube.DownSide.getVector())[3] == (*MyCube.DownSide.getVector())[4] && (*MyCube.DownSide.getVector())[4] == (*MyCube.DownSide.getVector())[5] && (*MyCube.DownSide.getVector())[5] == (*MyCube.DownSide.getVector())[7] && (*MyCube.DownSide.getVector())[7] == (*MyCube.DownSide.getVector())[6] && (*MyCube.DownSide.getVector())[6] == (*MyCube.DownSide.getVector())[8] && (*MyCube.DownSide.getVector())[8] == (*MyCube.DownSide.getVector())[2] && (*MyCube.DownSide.getVector())[2] == (*MyCube.DownSide.getVector())[0])
+        if ((*MyCube.DownSide.getVector())[1] == 'W' 
+        && (*MyCube.DownSide.getVector())[1] == (*MyCube.DownSide.getVector())[3] 
+        && (*MyCube.DownSide.getVector())[3] == (*MyCube.DownSide.getVector())[4] 
+        && (*MyCube.DownSide.getVector())[4] == (*MyCube.DownSide.getVector())[5] 
+        && (*MyCube.DownSide.getVector())[5] == (*MyCube.DownSide.getVector())[7] 
+        && (*MyCube.DownSide.getVector())[7] == (*MyCube.DownSide.getVector())[6] 
+        && (*MyCube.DownSide.getVector())[6] == (*MyCube.DownSide.getVector())[8] 
+        && (*MyCube.DownSide.getVector())[8] == (*MyCube.DownSide.getVector())[2] 
+        && (*MyCube.DownSide.getVector())[2] == (*MyCube.DownSide.getVector())[0])
         {
-            if ((*MyCube.FrontSide.getVector())[6] == (*MyCube.FrontSide.getVector())[7] && (*MyCube.FrontSide.getVector())[7] == (*MyCube.FrontSide.getVector())[8])
-            {
-                if ((*MyCube.RightSide.getVector())[6] == (*MyCube.RightSide.getVector())[7] && (*MyCube.RightSide.getVector())[7] == (*MyCube.RightSide.getVector())[8])
+            if ((*MyCube.FrontSide.getVector())[6] == (*MyCube.FrontSide.getVector())[7] 
+            && (*MyCube.FrontSide.getVector())[7] == (*MyCube.FrontSide.getVector())[8]){
+                if ((*MyCube.RightSide.getVector())[6] == (*MyCube.RightSide.getVector())[7] 
+                && (*MyCube.RightSide.getVector())[7] == (*MyCube.RightSide.getVector())[8])
                 {
-                    if ((*MyCube.LeftSide.getVector())[6] == (*MyCube.LeftSide.getVector())[7] && (*MyCube.LeftSide.getVector())[7] == (*MyCube.LeftSide.getVector())[8])
+                    if ((*MyCube.LeftSide.getVector())[6] == (*MyCube.LeftSide.getVector())[7] 
+                    && (*MyCube.LeftSide.getVector())[7] == (*MyCube.LeftSide.getVector())[8])
                     {
-                        if ((*MyCube.BackSide.getVector())[6] == (*MyCube.BackSide.getVector())[7] && (*MyCube.BackSide.getVector())[7] == (*MyCube.BackSide.getVector())[8])
+                        if ((*MyCube.BackSide.getVector())[6] == (*MyCube.BackSide.getVector())[7] 
+                        && (*MyCube.BackSide.getVector())[7] == (*MyCube.BackSide.getVector())[8])
                         {
                             isOk = true;
                         }
@@ -41,13 +55,21 @@
         bool isOk = false;
         if (isSolvedForSecond)
         {
-            if ((*MyCube.FrontSide.getVector())[3] == (*MyCube.FrontSide.getVector())[4] && (*MyCube.FrontSide.getVector())[4] == (*MyCube.FrontSide.getVector())[5] && (*MyCube.FrontSide.getVector())[5] == (*MyCube.FrontSide.getVector())[6])
+            if ((*MyCube.FrontSide.getVector())[3] == (*MyCube.FrontSide.getVector())[4] 
+            && (*MyCube.FrontSide.getVector())[4] == (*MyCube.FrontSide.getVector())[5] 
+            && (*MyCube.FrontSide.getVector())[5] == (*MyCube.FrontSide.getVector())[6])
             {
-                if ((*MyCube.RightSide.getVector())[3] == (*MyCube.RightSide.getVector())[4] && (*MyCube.RightSide.getVector())[4] == (*MyCube.RightSide.getVector())[5] && (*MyCube.RightSide.getVector())[5] == (*MyCube.RightSide.getVector())[6])
+                if ((*MyCube.RightSide.getVector())[3] == (*MyCube.RightSide.getVector())[4] 
+                && (*MyCube.RightSide.getVector())[4] == (*MyCube.RightSide.getVector())[5] 
+                && (*MyCube.RightSide.getVector())[5] == (*MyCube.RightSide.getVector())[6])
                 {
-                    if ((*MyCube.LeftSide.getVector())[3] == (*MyCube.LeftSide.getVector())[4] && (*MyCube.LeftSide.getVector())[4] == (*MyCube.LeftSide.getVector())[5] && (*MyCube.LeftSide.getVector())[5] == (*MyCube.LeftSide.getVector())[6])
+                    if ((*MyCube.LeftSide.getVector())[3] == (*MyCube.LeftSide.getVector())[4] 
+                    && (*MyCube.LeftSide.getVector())[4] == (*MyCube.LeftSide.getVector())[5] 
+                    && (*MyCube.LeftSide.getVector())[5] == (*MyCube.LeftSide.getVector())[6])
                     {
-                        if ((*MyCube.BackSide.getVector())[3] == (*MyCube.BackSide.getVector())[4] && (*MyCube.BackSide.getVector())[4] == (*MyCube.BackSide.getVector())[5] && (*MyCube.BackSide.getVector())[5] == (*MyCube.BackSide.getVector())[6])
+                        if ((*MyCube.BackSide.getVector())[3] == (*MyCube.BackSide.getVector())[4] 
+                        && (*MyCube.BackSide.getVector())[4] == (*MyCube.BackSide.getVector())[5] 
+                        && (*MyCube.BackSide.getVector())[5] == (*MyCube.BackSide.getVector())[6])
                         {
                             isOk = true;
                         }
@@ -61,7 +83,11 @@
         bool isOk = false;
         if (isSolvedForThird)
         {
-            if ((*MyCube.UpSide.getVector())[1] == 'Y' && (*MyCube.UpSide.getVector())[1] == (*MyCube.UpSide.getVector())[3] && (*MyCube.UpSide.getVector())[3] == (*MyCube.UpSide.getVector())[4] && (*MyCube.UpSide.getVector())[4] == (*MyCube.UpSide.getVector())[5] && (*MyCube.UpSide.getVector())[5] == (*MyCube.UpSide.getVector())[7])
+            if ((*MyCube.UpSide.getVector())[1] == 'Y' 
+            && (*MyCube.UpSide.getVector())[1] == (*MyCube.UpSide.getVector())[3] 
+            && (*MyCube.UpSide.getVector())[3] == (*MyCube.UpSide.getVector())[4] 
+            && (*MyCube.UpSide.getVector())[4] == (*MyCube.UpSide.getVector())[5] 
+            && (*MyCube.UpSide.getVector())[5] == (*MyCube.UpSide.getVector())[7])
             {
                 isOk = true;
             }
@@ -184,7 +210,15 @@
     }
     bool isSolvedForSixth(Cube &MyCube, std::vector<char> &TempMatrix){
         bool isOk = false;
-        if ((*MyCube.UpSide.getVector())[1] == 'Y' && (*MyCube.UpSide.getVector())[1] == (*MyCube.UpSide.getVector())[3] && (*MyCube.UpSide.getVector())[3] == (*MyCube.UpSide.getVector())[4] && (*MyCube.UpSide.getVector())[4] == (*MyCube.UpSide.getVector())[5] && (*MyCube.UpSide.getVector())[5] == (*MyCube.UpSide.getVector())[7] && (*MyCube.UpSide.getVector())[7] == (*MyCube.UpSide.getVector())[6] && (*MyCube.UpSide.getVector())[6] == (*MyCube.UpSide.getVector())[8] && (*MyCube.UpSide.getVector())[8] == (*MyCube.UpSide.getVector())[2] && (*MyCube.UpSide.getVector())[2] == (*MyCube.UpSide.getVector())[0])
+        if ((*MyCube.UpSide.getVector())[1] == 'Y' 
+        && (*MyCube.UpSide.getVector())[1] == (*MyCube.UpSide.getVector())[3] 
+        && (*MyCube.UpSide.getVector())[3] == (*MyCube.UpSide.getVector())[4] 
+        && (*MyCube.UpSide.getVector())[4] == (*MyCube.UpSide.getVector())[5] 
+        && (*MyCube.UpSide.getVector())[5] == (*MyCube.UpSide.getVector())[7] 
+        && (*MyCube.UpSide.getVector())[7] == (*MyCube.UpSide.getVector())[6] 
+        && (*MyCube.UpSide.getVector())[6] == (*MyCube.UpSide.getVector())[8] 
+        && (*MyCube.UpSide.getVector())[8] == (*MyCube.UpSide.getVector())[2] 
+        && (*MyCube.UpSide.getVector())[2] == (*MyCube.UpSide.getVector())[0])
         {
             isOk = true;
         }
@@ -197,27 +231,69 @@
         bool leftIsOk = false;
         bool downIsOk = false;
         bool rightIsOk = false;
-        if ((*MyCube.FrontSide.getVector())[8] == (*MyCube.FrontSide.getVector())[7] && (*MyCube.FrontSide.getVector())[7] == (*MyCube.FrontSide.getVector())[6] && (*MyCube.FrontSide.getVector())[6] == (*MyCube.FrontSide.getVector())[5] && (*MyCube.FrontSide.getVector())[5] == (*MyCube.FrontSide.getVector())[4] && (*MyCube.FrontSide.getVector())[4] == (*MyCube.FrontSide.getVector())[3] && (*MyCube.FrontSide.getVector())[3] == (*MyCube.FrontSide.getVector())[2] && (*MyCube.FrontSide.getVector())[2] == (*MyCube.FrontSide.getVector())[1] && (*MyCube.FrontSide.getVector())[1] == (*MyCube.FrontSide.getVector())[0])
+        if ((*MyCube.FrontSide.getVector())[8] == (*MyCube.FrontSide.getVector())[7] 
+        && (*MyCube.FrontSide.getVector())[7] == (*MyCube.FrontSide.getVector())[6] 
+        && (*MyCube.FrontSide.getVector())[6] == (*MyCube.FrontSide.getVector())[5] 
+        && (*MyCube.FrontSide.getVector())[5] == (*MyCube.FrontSide.getVector())[4] 
+        && (*MyCube.FrontSide.getVector())[4] == (*MyCube.FrontSide.getVector())[3] 
+        && (*MyCube.FrontSide.getVector())[3] == (*MyCube.FrontSide.getVector())[2] 
+        && (*MyCube.FrontSide.getVector())[2] == (*MyCube.FrontSide.getVector())[1] 
+        && (*MyCube.FrontSide.getVector())[1] == (*MyCube.FrontSide.getVector())[0])
         {
             frontIsOk = true;
         }
-        if ((*MyCube.BackSide.getVector())[8] == (*MyCube.BackSide.getVector())[7] && (*MyCube.BackSide.getVector())[7] == (*MyCube.BackSide.getVector())[6] && (*MyCube.BackSide.getVector())[6] == (*MyCube.BackSide.getVector())[5] && (*MyCube.BackSide.getVector())[5] == (*MyCube.BackSide.getVector())[4] && (*MyCube.BackSide.getVector())[4] == (*MyCube.BackSide.getVector())[3] && (*MyCube.BackSide.getVector())[3] == (*MyCube.BackSide.getVector())[2] && (*MyCube.BackSide.getVector())[2] == (*MyCube.BackSide.getVector())[1] && (*MyCube.BackSide.getVector())[1] == (*MyCube.BackSide.getVector())[0])
+        if ((*MyCube.BackSide.getVector())[8] == (*MyCube.BackSide.getVector())[7] 
+        && (*MyCube.BackSide.getVector())[7] == (*MyCube.BackSide.getVector())[6] 
+        && (*MyCube.BackSide.getVector())[6] == (*MyCube.BackSide.getVector())[5] 
+        && (*MyCube.BackSide.getVector())[5] == (*MyCube.BackSide.getVector())[4] 
+        && (*MyCube.BackSide.getVector())[4] == (*MyCube.BackSide.getVector())[3] 
+        && (*MyCube.BackSide.getVector())[3] == (*MyCube.BackSide.getVector())[2] 
+        && (*MyCube.BackSide.getVector())[2] == (*MyCube.BackSide.getVector())[1] 
+        && (*MyCube.BackSide.getVector())[1] == (*MyCube.BackSide.getVector())[0])
         {
             backIsOk = true;
         }
-        if ((*MyCube.UpSide.getVector())[8] == (*MyCube.UpSide.getVector())[7] && (*MyCube.UpSide.getVector())[7] == (*MyCube.UpSide.getVector())[6] && (*MyCube.UpSide.getVector())[6] == (*MyCube.UpSide.getVector())[5] && (*MyCube.UpSide.getVector())[5] == (*MyCube.UpSide.getVector())[4] && (*MyCube.UpSide.getVector())[4] == (*MyCube.UpSide.getVector())[3] && (*MyCube.UpSide.getVector())[3] == (*MyCube.UpSide.getVector())[2] && (*MyCube.UpSide.getVector())[2] == (*MyCube.UpSide.getVector())[1] && (*MyCube.UpSide.getVector())[1] == (*MyCube.UpSide.getVector())[0])
+        if ((*MyCube.UpSide.getVector())[8] == (*MyCube.UpSide.getVector())[7] 
+        && (*MyCube.UpSide.getVector())[7] == (*MyCube.UpSide.getVector())[6] 
+        && (*MyCube.UpSide.getVector())[6] == (*MyCube.UpSide.getVector())[5] 
+        && (*MyCube.UpSide.getVector())[5] == (*MyCube.UpSide.getVector())[4] 
+        && (*MyCube.UpSide.getVector())[4] == (*MyCube.UpSide.getVector())[3] 
+        && (*MyCube.UpSide.getVector())[3] == (*MyCube.UpSide.getVector())[2] 
+        && (*MyCube.UpSide.getVector())[2] == (*MyCube.UpSide.getVector())[1] 
+        && (*MyCube.UpSide.getVector())[1] == (*MyCube.UpSide.getVector())[0])
         {
             upIsOk = true;
         }
-        if ((*MyCube.LeftSide.getVector())[8] == (*MyCube.LeftSide.getVector())[7] && (*MyCube.LeftSide.getVector())[7] == (*MyCube.LeftSide.getVector())[6] && (*MyCube.LeftSide.getVector())[6] == (*MyCube.LeftSide.getVector())[5] && (*MyCube.LeftSide.getVector())[5] == (*MyCube.LeftSide.getVector())[4] && (*MyCube.LeftSide.getVector())[4] == (*MyCube.LeftSide.getVector())[3] && (*MyCube.LeftSide.getVector())[3] == (*MyCube.LeftSide.getVector())[2] && (*MyCube.LeftSide.getVector())[2] == (*MyCube.LeftSide.getVector())[1] && (*MyCube.LeftSide.getVector())[1] == (*MyCube.LeftSide.getVector())[0])
+        if ((*MyCube.LeftSide.getVector())[8] == (*MyCube.LeftSide.getVector())[7] 
+        && (*MyCube.LeftSide.getVector())[7] == (*MyCube.LeftSide.getVector())[6] 
+        && (*MyCube.LeftSide.getVector())[6] == (*MyCube.LeftSide.getVector())[5] 
+        && (*MyCube.LeftSide.getVector())[5] == (*MyCube.LeftSide.getVector())[4] 
+        && (*MyCube.LeftSide.getVector())[4] == (*MyCube.LeftSide.getVector())[3] 
+        && (*MyCube.LeftSide.getVector())[3] == (*MyCube.LeftSide.getVector())[2] 
+        && (*MyCube.LeftSide.getVector())[2] == (*MyCube.LeftSide.getVector())[1] 
+        && (*MyCube.LeftSide.getVector())[1] == (*MyCube.LeftSide.getVector())[0])
         {
             leftIsOk = true;
         }
-        if ((*MyCube.DownSide.getVector())[8] == (*MyCube.DownSide.getVector())[7] && (*MyCube.DownSide.getVector())[7] == (*MyCube.DownSide.getVector())[6] && (*MyCube.DownSide.getVector())[6] == (*MyCube.DownSide.getVector())[5] && (*MyCube.DownSide.getVector())[5] == (*MyCube.DownSide.getVector())[4] && (*MyCube.DownSide.getVector())[4] == (*MyCube.DownSide.getVector())[3] && (*MyCube.DownSide.getVector())[3] == (*MyCube.DownSide.getVector())[2] && (*MyCube.DownSide.getVector())[2] == (*MyCube.DownSide.getVector())[1] && (*MyCube.DownSide.getVector())[1] == (*MyCube.DownSide.getVector())[0])
+        if ((*MyCube.DownSide.getVector())[8] == (*MyCube.DownSide.getVector())[7] 
+        && (*MyCube.DownSide.getVector())[7] == (*MyCube.DownSide.getVector())[6] 
+        && (*MyCube.DownSide.getVector())[6] == (*MyCube.DownSide.getVector())[5] 
+        && (*MyCube.DownSide.getVector())[5] == (*MyCube.DownSide.getVector())[4] 
+        && (*MyCube.DownSide.getVector())[4] == (*MyCube.DownSide.getVector())[3] 
+        && (*MyCube.DownSide.getVector())[3] == (*MyCube.DownSide.getVector())[2] 
+        && (*MyCube.DownSide.getVector())[2] == (*MyCube.DownSide.getVector())[1] 
+        && (*MyCube.DownSide.getVector())[1] == (*MyCube.DownSide.getVector())[0])
         {
             downIsOk = true;
         }
-        if ((*MyCube.RightSide.getVector())[8] == (*MyCube.RightSide.getVector())[7] && (*MyCube.RightSide.getVector())[7] == (*MyCube.RightSide.getVector())[6] && (*MyCube.RightSide.getVector())[6] == (*MyCube.RightSide.getVector())[5] && (*MyCube.RightSide.getVector())[5] == (*MyCube.RightSide.getVector())[4] && (*MyCube.RightSide.getVector())[4] == (*MyCube.RightSide.getVector())[3] && (*MyCube.RightSide.getVector())[3] == (*MyCube.RightSide.getVector())[2] && (*MyCube.RightSide.getVector())[2] == (*MyCube.RightSide.getVector())[1] && (*MyCube.RightSide.getVector())[1] == (*MyCube.RightSide.getVector())[0])
+        if ((*MyCube.RightSide.getVector())[8] == (*MyCube.RightSide.getVector())[7] 
+        && (*MyCube.RightSide.getVector())[7] == (*MyCube.RightSide.getVector())[6] 
+        && (*MyCube.RightSide.getVector())[6] == (*MyCube.RightSide.getVector())[5] 
+        && (*MyCube.RightSide.getVector())[5] == (*MyCube.RightSide.getVector())[4] 
+        && (*MyCube.RightSide.getVector())[4] == (*MyCube.RightSide.getVector())[3] 
+        && (*MyCube.RightSide.getVector())[3] == (*MyCube.RightSide.getVector())[2] 
+        && (*MyCube.RightSide.getVector())[2] == (*MyCube.RightSide.getVector())[1] 
+        && (*MyCube.RightSide.getVector())[1] == (*MyCube.RightSide.getVector())[0])
         {
             rightIsOk = true;
         }
@@ -871,7 +947,8 @@
                 while (check)
                 {
                     check = false;
-                    if (((*MyCube.FrontSide.getVector())[1] == (*MyCube.FrontSide.getVector())[4]) && (*MyCube.UpSide.getVector())[7] == 'W')
+                    if (((*MyCube.FrontSide.getVector())[1] == (*MyCube.FrontSide.getVector())[4]) 
+                    && (*MyCube.UpSide.getVector())[7] == 'W')
                     {
                         MyCube.F(MyCube, TempMatrix);
                         ansForFirst += std::string("F, ");
@@ -960,7 +1037,9 @@
                                     {
                                         MyCube.RightSideAlgorithm(MyCube, 1);
                                         ansForSecond += std::string("RR, ");
-                                        if (((*MyCube.DownSide.getVector())[2] == 'W') && ((*MyCube.FrontSide.getVector())[8] == (*MyCube.FrontSide.getVector())[4]) && ((*MyCube.RightSide.getVector())[4] == (*MyCube.RightSide.getVector())[4]))
+                                        if (((*MyCube.DownSide.getVector())[2] == 'W') 
+                                        && ((*MyCube.FrontSide.getVector())[8] == (*MyCube.FrontSide.getVector())[4]) 
+                                        && ((*MyCube.RightSide.getVector())[4] == (*MyCube.RightSide.getVector())[4]))
                                             break;
                                     }
                                 }
@@ -1018,7 +1097,9 @@
                                     {
                                         MyCube.RightSideAlgorithm(MyCube, 1);
                                         ansForSecond += std::string("RR, ");
-                                        if (((*MyCube.DownSide.getVector())[2] == 'W') && ((*MyCube.FrontSide.getVector())[8] == (*MyCube.FrontSide.getVector())[4]) && ((*MyCube.RightSide.getVector())[4] == (*MyCube.RightSide.getVector())[4]))
+                                        if (((*MyCube.DownSide.getVector())[2] == 'W') 
+                                        && ((*MyCube.FrontSide.getVector())[8] == (*MyCube.FrontSide.getVector())[4]) 
+                                        && ((*MyCube.RightSide.getVector())[4] == (*MyCube.RightSide.getVector())[4]))
                                             break;
                                     }
                                 }
@@ -1047,7 +1128,8 @@
             int cntTemp = 4;
             while (cntTemp--)
             {
-                if (((*MyCube.FrontSide.getVector())[3] != (*MyCube.FrontSide.getVector())[4]) || ((*MyCube.LeftSide.getVector())[5] != (*MyCube.LeftSide.getVector())[4]))
+                if (((*MyCube.FrontSide.getVector())[3] != (*MyCube.FrontSide.getVector())[4]) 
+                || ((*MyCube.LeftSide.getVector())[5] != (*MyCube.LeftSide.getVector())[4]))
                 {
                     QtyOfWrongEndgesOnSecondLine++;
                 }
@@ -1064,7 +1146,8 @@
                     int QtyOrientation = 16;
                     while (QtyOrientation--)
                     {
-                        if (((*MyCube.FrontSide.getVector())[4] == (*MyCube.FrontSide.getVector())[1]) && ((*MyCube.UpSide.getVector())[7] != 'Y') && ((*MyCube.FrontSide.getVector())[1] != 'Y'))
+                        if (((*MyCube.FrontSide.getVector())[4] == (*MyCube.FrontSide.getVector())[1]) 
+                        && ((*MyCube.UpSide.getVector())[7] != 'Y') && ((*MyCube.FrontSide.getVector())[1] != 'Y'))
                         {
                             if ((*MyCube.LeftSide.getVector())[4] == (*MyCube.UpSide.getVector())[7])
                             {
@@ -1108,7 +1191,9 @@
                 {
                     while (!isChangeInLastCase)
                     {
-                        if ((((*MyCube.FrontSide.getVector())[5] != (*MyCube.FrontSide.getVector())[4]) || ((*MyCube.RightSide.getVector())[3] != (*MyCube.RightSide.getVector())[4])) && (((*MyCube.FrontSide.getVector())[5] != 'Y') && ((*MyCube.RightSide.getVector())[3] != 'Y')))
+                        if ((((*MyCube.FrontSide.getVector())[5] != (*MyCube.FrontSide.getVector())[4]) 
+                        || ((*MyCube.RightSide.getVector())[3] != (*MyCube.RightSide.getVector())[4])) 
+                        && (((*MyCube.FrontSide.getVector())[5] != 'Y') && ((*MyCube.RightSide.getVector())[3] != 'Y')))
                         {
                             MyCube.U(MyCube, TempMatrix);
                             ansForThird += std::string("U, ");
@@ -1139,7 +1224,13 @@
         if (!isSolvedForFourth(MyCube, TempMatrix))
         {
     
-            if (((*MyCube.UpSide.getVector())[4] == 'Y') && (!((*MyCube.UpSide.getVector())[3] == 'Y' && (*MyCube.UpSide.getVector())[3] == (*MyCube.UpSide.getVector())[4] && (*MyCube.UpSide.getVector())[4] == (*MyCube.UpSide.getVector())[5])) && (!((*MyCube.UpSide.getVector())[1] == 'Y' && (*MyCube.UpSide.getVector())[1] == (*MyCube.UpSide.getVector())[4] && (*MyCube.UpSide.getVector())[4] == (*MyCube.UpSide.getVector())[7])) && (!((*MyCube.UpSide.getVector())[1] == 'Y' && (*MyCube.UpSide.getVector())[1] == (*MyCube.UpSide.getVector())[4] && (*MyCube.UpSide.getVector())[4] == (*MyCube.UpSide.getVector())[3])) && (!((*MyCube.UpSide.getVector())[3] == 'Y' && (*MyCube.UpSide.getVector())[3] == (*MyCube.UpSide.getVector())[4] && (*MyCube.UpSide.getVector())[4] == (*MyCube.UpSide.getVector())[7])) && (!((*MyCube.UpSide.getVector())[5] == 'Y' && (*MyCube.UpSide.getVector())[5] == (*MyCube.UpSide.getVector())[4] && (*MyCube.UpSide.getVector())[4] == (*MyCube.UpSide.getVector())[7])) && (!((*MyCube.UpSide.getVector())[1] == 'Y' && (*MyCube.UpSide.getVector())[1] == (*MyCube.UpSide.getVector())[4] && (*MyCube.UpSide.getVector())[4] == (*MyCube.UpSide.getVector())[5])))
+            if (((*MyCube.UpSide.getVector())[4] == 'Y') 
+            && (!((*MyCube.UpSide.getVector())[3] == 'Y' && (*MyCube.UpSide.getVector())[3] == (*MyCube.UpSide.getVector())[4] && (*MyCube.UpSide.getVector())[4] == (*MyCube.UpSide.getVector())[5])) 
+            && (!((*MyCube.UpSide.getVector())[1] == 'Y' && (*MyCube.UpSide.getVector())[1] == (*MyCube.UpSide.getVector())[4] && (*MyCube.UpSide.getVector())[4] == (*MyCube.UpSide.getVector())[7])) 
+            && (!((*MyCube.UpSide.getVector())[1] == 'Y' && (*MyCube.UpSide.getVector())[1] == (*MyCube.UpSide.getVector())[4] && (*MyCube.UpSide.getVector())[4] == (*MyCube.UpSide.getVector())[3])) 
+            && (!((*MyCube.UpSide.getVector())[3] == 'Y' && (*MyCube.UpSide.getVector())[3] == (*MyCube.UpSide.getVector())[4] && (*MyCube.UpSide.getVector())[4] == (*MyCube.UpSide.getVector())[7])) 
+            && (!((*MyCube.UpSide.getVector())[5] == 'Y' && (*MyCube.UpSide.getVector())[5] == (*MyCube.UpSide.getVector())[4] && (*MyCube.UpSide.getVector())[4] == (*MyCube.UpSide.getVector())[7])) 
+            && (!((*MyCube.UpSide.getVector())[1] == 'Y' && (*MyCube.UpSide.getVector())[1] == (*MyCube.UpSide.getVector())[4] && (*MyCube.UpSide.getVector())[4] == (*MyCube.UpSide.getVector())[5])))
             {
                 MyCube.F(MyCube, TempMatrix);
                 ansForFourth += std::string("F, ");
@@ -1151,7 +1242,9 @@
     
             // Yellow Cross
             // First Case (horizontal line)
-            if ((*MyCube.UpSide.getVector())[3] == 'Y' && (*MyCube.UpSide.getVector())[3] == (*MyCube.UpSide.getVector())[4] && (*MyCube.UpSide.getVector())[4] == (*MyCube.UpSide.getVector())[5])
+            if ((*MyCube.UpSide.getVector())[3] == 'Y' 
+            && (*MyCube.UpSide.getVector())[3] == (*MyCube.UpSide.getVector())[4] 
+            && (*MyCube.UpSide.getVector())[4] == (*MyCube.UpSide.getVector())[5])
             {
                 MyCube.F(MyCube, TempMatrix);
                 ansForFourth += std::string("F, ");
@@ -1160,7 +1253,9 @@
                 MyCube.F_(MyCube, TempMatrix);
                 ansForFourth += std::string("F_, ");
             }
-            if ((*MyCube.UpSide.getVector())[1] == 'Y' && (*MyCube.UpSide.getVector())[1] == (*MyCube.UpSide.getVector())[4] && (*MyCube.UpSide.getVector())[4] == (*MyCube.UpSide.getVector())[7])
+            if ((*MyCube.UpSide.getVector())[1] == 'Y' 
+            && (*MyCube.UpSide.getVector())[1] == (*MyCube.UpSide.getVector())[4] 
+            && (*MyCube.UpSide.getVector())[4] == (*MyCube.UpSide.getVector())[7])
             {
     
                 MyCube.ChangeOrientation("Right", 1);
@@ -1182,7 +1277,9 @@
                 FixPosOfCube = (*MyCube.FrontSide.getVector())[4];
                 while (LocalCntForRotation--)
                 {
-                    if ((*MyCube.UpSide.getVector())[1] == 'Y' && (*MyCube.UpSide.getVector())[4] == (*MyCube.UpSide.getVector())[1] && (*MyCube.UpSide.getVector())[3] == (*MyCube.UpSide.getVector())[1])
+                    if ((*MyCube.UpSide.getVector())[1] == 'Y' 
+                    && (*MyCube.UpSide.getVector())[4] == (*MyCube.UpSide.getVector())[1] 
+                    && (*MyCube.UpSide.getVector())[3] == (*MyCube.UpSide.getVector())[1])
                     {
                         MyCube.F(MyCube, TempMatrix);
                         ansForFourth += std::string("F, ");
@@ -1534,7 +1631,14 @@
             int cnt = 0;
             while (cntOfRot--)
             {
-                if ((*MyCube.FrontSide.getVector())[8] == (*MyCube.FrontSide.getVector())[7] && (*MyCube.FrontSide.getVector())[7] == (*MyCube.FrontSide.getVector())[6] && (*MyCube.FrontSide.getVector())[6] == (*MyCube.FrontSide.getVector())[5] && (*MyCube.FrontSide.getVector())[5] == (*MyCube.FrontSide.getVector())[4] && (*MyCube.FrontSide.getVector())[4] == (*MyCube.FrontSide.getVector())[3] && (*MyCube.FrontSide.getVector())[3] == (*MyCube.FrontSide.getVector())[2] && (*MyCube.FrontSide.getVector())[2] == (*MyCube.FrontSide.getVector())[1] && (*MyCube.FrontSide.getVector())[1] == (*MyCube.FrontSide.getVector())[0])
+                if ((*MyCube.FrontSide.getVector())[8] == (*MyCube.FrontSide.getVector())[7] 
+                && (*MyCube.FrontSide.getVector())[7] == (*MyCube.FrontSide.getVector())[6] 
+                && (*MyCube.FrontSide.getVector())[6] == (*MyCube.FrontSide.getVector())[5] 
+                && (*MyCube.FrontSide.getVector())[5] == (*MyCube.FrontSide.getVector())[4] 
+                && (*MyCube.FrontSide.getVector())[4] == (*MyCube.FrontSide.getVector())[3] 
+                && (*MyCube.FrontSide.getVector())[3] == (*MyCube.FrontSide.getVector())[2] 
+                && (*MyCube.FrontSide.getVector())[2] == (*MyCube.FrontSide.getVector())[1] 
+                && (*MyCube.FrontSide.getVector())[1] == (*MyCube.FrontSide.getVector())[0])
                 {
                     IsCompleteThirdSide = true;
                 }
@@ -1555,7 +1659,14 @@
             cntOfRot = 4;
             while (cntOfRot--)
             {
-                if ((*MyCube.FrontSide.getVector())[8] == (*MyCube.FrontSide.getVector())[7] && (*MyCube.FrontSide.getVector())[7] == (*MyCube.FrontSide.getVector())[6] && (*MyCube.FrontSide.getVector())[6] == (*MyCube.FrontSide.getVector())[5] && (*MyCube.FrontSide.getVector())[5] == (*MyCube.FrontSide.getVector())[4] && (*MyCube.FrontSide.getVector())[4] == (*MyCube.FrontSide.getVector())[3] && (*MyCube.FrontSide.getVector())[3] == (*MyCube.FrontSide.getVector())[2] && (*MyCube.FrontSide.getVector())[2] == (*MyCube.FrontSide.getVector())[1] && (*MyCube.FrontSide.getVector())[1] == (*MyCube.FrontSide.getVector())[0])
+                if ((*MyCube.FrontSide.getVector())[8] == (*MyCube.FrontSide.getVector())[7] 
+                && (*MyCube.FrontSide.getVector())[7] == (*MyCube.FrontSide.getVector())[6] 
+                && (*MyCube.FrontSide.getVector())[6] == (*MyCube.FrontSide.getVector())[5] 
+                && (*MyCube.FrontSide.getVector())[5] == (*MyCube.FrontSide.getVector())[4] 
+                && (*MyCube.FrontSide.getVector())[4] == (*MyCube.FrontSide.getVector())[3] 
+                && (*MyCube.FrontSide.getVector())[3] == (*MyCube.FrontSide.getVector())[2] 
+                && (*MyCube.FrontSide.getVector())[2] == (*MyCube.FrontSide.getVector())[1] 
+                && (*MyCube.FrontSide.getVector())[1] == (*MyCube.FrontSide.getVector())[0])
                 {
                     break;
                 }

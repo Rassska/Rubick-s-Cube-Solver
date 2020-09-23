@@ -10,34 +10,34 @@
 #include "Init.h"
 void init(Cube &MyCube)
 {
-    int size = 3;
-    std::vector<char> FrontPosition(size * size);
-    std::vector<char> BackPosition(size * size);
-    std::vector<char> UpPosition(size * size);
-    std::vector<char> LeftPosition(size * size);
-    std::vector<char> DownPosition(size * size);
-    std::vector<char> RightPosition(size * size);
-    for (int i = 0; i < 9; i++)
+    int size = 9;
+    std::vector<char> FrontPosition(size);
+    std::vector<char> BackPosition(size);
+    std::vector<char> UpPosition(size);
+    std::vector<char> LeftPosition(size);
+    std::vector<char> DownPosition(size);
+    std::vector<char> RightPosition(size);
+    for (int i = 0; i < size; i++)
     {
         std::cin >> FrontPosition[i];
     }
-    for (int i = 0; i < 9; i++)
+    for (int i = 0; i < size; i++)
     {
         std::cin >> BackPosition[i];
     }
-    for (int i = 0; i < 9; i++)
+    for (int i = 0; i < size; i++)
     {
         std::cin >> UpPosition[i];
     }
-    for (int i = 0; i < 9; i++)
+    for (int i = 0; i < size; i++)
     {
         std::cin >> LeftPosition[i];
     }
-    for (int i = 0; i < 9; i++)
+    for (int i = 0; i < size; i++)
     {
         std::cin >> DownPosition[i];
     }
-    for (int i = 0; i < 9; i++)
+    for (int i = 0; i < size; i++)
     {
         std::cin >> RightPosition[i];
     }
