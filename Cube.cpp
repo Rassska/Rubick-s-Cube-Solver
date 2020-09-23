@@ -17,6 +17,7 @@
         && (*MyCube.DownSide.getVector())[4] == (*MyCube.DownSide.getVector())[5] 
         && (*MyCube.DownSide.getVector())[5] == (*MyCube.DownSide.getVector())[7]){
             isOk = true;
+            
         }
         return isOk;
     }
